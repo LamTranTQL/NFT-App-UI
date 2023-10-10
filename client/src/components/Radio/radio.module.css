@@ -1,0 +1,53 @@
+.Radio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.RadioOption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.RadioItem {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #d0d5dd;
+  background-color: #ffffff;
+}
+.RadioItem[aria-checked="true"] {
+  background-color: #f9f5ff;
+  border-color: #6c59ff;
+}
+
+.RadioIndicator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RadioIndicator::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #6c59ff;
+  display: block;
+}
+
+.RadioLabel {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.445;
+  color: #344054;
+}
+
+input:checked + .RadioLabel {
+  font-weight: 500;
+}

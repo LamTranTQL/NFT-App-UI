@@ -1,0 +1,49 @@
+.RadioGroupRoot {
+  display: flex;
+  flex-direction: row;
+}
+.RadioGroupItem {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.445;
+  padding: 12px 20px;
+  color: #0d0d0d;
+  border: 2px solid #f0f0f0;
+  border-radius: 0;
+}
+.LastRadioGroupItem {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.445;
+  padding: 12px 20px;
+  color: #0d0d0d;
+  border: 2px solid #f0f0f0;
+  border-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.FirstRadioGroupItem {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.445;
+  padding: 12px 20px;
+  color: #0d0d0d;
+  border: 2px solid #f0f0f0;
+  border-radius: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.FirstRadioGroupItem[aria-checked="true"] {
+  color: #ffffff;
+  background-color: #6c59ff;
+}
+.RadioGroupItem[aria-checked="true"] {
+  color: #ffffff;
+  background-color: #6c59ff;
+}
+.LastRadioGroupItem[aria-checked="true"] {
+  color: #ffffff;
+  background-color: #6c59ff;
+}

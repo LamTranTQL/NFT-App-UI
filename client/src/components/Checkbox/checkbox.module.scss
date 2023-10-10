@@ -1,0 +1,28 @@
+.checkbox[type="checkbox"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #d0d5dd;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &::after {
+    content: (url("../../assets//icons//check.svg"));
+    width: 14px;
+    height: 14px;
+    display: none;
+  }
+  &:checked {
+    background-color: #f9f5ff;
+    border-color: #6c59ff;
+  }
+  &:checked::after {
+    display: block;
+  }
+}

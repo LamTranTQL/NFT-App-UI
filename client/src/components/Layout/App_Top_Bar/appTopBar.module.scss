@@ -1,0 +1,23 @@
+.menuTrigger {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  &:hover {
+    background-color: #8e80ff;
+  }
+}
+.menuTrigger[data-highlighted],
+.menuTrigger[data-state="open"] {
+  background-color: #8e80ff;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  background-color: rgba(52, 64, 84, 0.75);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0px rgba(16, 24, 40, 0.06);
+}
