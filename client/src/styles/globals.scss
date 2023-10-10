@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border-radius: 8px;
+  width: auto;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.445;
+  background-color: #fafafa;
+}
+
+label {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #636363;
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #344054;
+  &::placeholder {
+    color: #393939;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table > tr {
+  display: flex;
+  flex-direction: row;
+}
+table th {
+  padding: 12px 24px;
+  background-color: #fcfcfd;
+  border-bottom: 1px solid #eaecf0;
+}
+table td {
+  padding: 8px 24px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+// tailwind class
+
+.input-wrapper {
+  @apply w-full border border-Gray-200 rounded-xl py-5 px-8;
+}
+
+.input-wrapper-disabled {
+  @apply w-full border-b border-Gray-200 py-[7px];
+}
+
+.table-header {
+  @apply font-medium text-sm text-Gray-600 block text-start;
+}
+
+.button-pagination {
+  @apply px-2 py-1;
+}
+
+.heading-4 {
+  @apply font-medium text-xl text-dark-100;
+}

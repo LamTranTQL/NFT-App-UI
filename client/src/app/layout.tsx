@@ -1,8 +1,12 @@
-import "@/styles/globals.css";
+import { LayoutProvider } from "@/context/layoutContext";
+import "../styles/globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Jost } from "next/font/google";
+import AppTopBar from "@/components/Layout/App_Top_Bar/appTopBar.component";
+import SubHeaderBar from "@/components/Layout/Sub_Header_Bar/subHeaderBar.component";
+import AppSideBar from "@/components/Layout/App_Side_Bar/appSideBar.component";
+import Appfooter from "@/components/Layout/App_Footer/appFooter.component";
+const jost = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NFT App UI",
@@ -16,7 +20,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={jost.className}>
+        <LayoutProvider>
+          <div className='w-full min-h-screen relative pt-[69px] pb-[132px]'>
+            <AppTopBar />
+            <SubHeaderBar />
+            <main className='w-full'>
+              <div className='flex flex-row w-full max-w-container mx-auto px-16 pt-8 gap-[30px]'>
+                <AppSideBar />
+                <div className='w-full'>{children}</div>
+              </div>
+            </main>
+            <Appfooter />
+          </div>
+        </LayoutProvider>
+      </body>
     </html>
   );
 }
